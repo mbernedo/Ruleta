@@ -1,0 +1,90 @@
+﻿@font-face {
+    font-family: 'antonioregular';
+    src: url("../fonts/ant-regular-webfont.eot");
+    src: url("../fonts/ant-regular-webfont.woff2") format('woff2'), 
+        url("../fonts/ant-regular-webfont.woff") format('woff'), 
+        url("../fonts/ant-regular-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'antoniolight';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.woff2") format('woff2'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-light-webfont.svg#antoniolight") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'antoniobold';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.woff2") format('woff2'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/ant-bold-webfont.svg#antoniobold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url("../fonts/OpenSans-Regular-webfont.eot");
+    src: url("../fonts/OpenSans-Regular-webfont.woff") format('woff'), 
+        url("../fonts/OpenSans-Regular-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Italic-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Italic-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Italic-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Italic-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Italic-webfont.svg#open_sansitalic") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Light-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Light-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Light-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Light-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Light-webfont.svg#open_sanslight") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-LightItalic-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-LightItalic-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-LightItalic-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-LightItalic-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-LightItalic-webfont.svg#open_sanslight_italic") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Semibold-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Semibold-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Semibold-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Semibold-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-SemiboldItalic-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-SemiboldItalic-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-SemiboldItalic-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-SemiboldItalic-webfont.svg#open_sanssemibold_italic") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Bold-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Bold-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Bold-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Bold-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-Bold-webfont.svg#open_sansbold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-BoldItalic-webfont.eot");
+    src: url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-BoldItalic-webfont.eot?#iefix") format('embedded-opentype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-BoldItalic-webfont.woff") format('woff'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-BoldItalic-webfont.ttf") format('truetype'), url("https://www.sat.gob.pe/websitev9/Portals/_default/Skins/WebSATSkin/fonts/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

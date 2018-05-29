@@ -1,0 +1,697 @@
+// ruleta.js
+jQuery.curCSS = function (element, prop, val) {
+    return jQuery(element).css(prop, val);
+};
+
+var contribuyentes=[];
+var contribuyente = null;
+var participanteID = 0;
+var juegoParticipante = null;
+var participanteOportunidades = null;
+var oportunidadActualId = null;
+var secuenciaActual = null;
+var tipoPremio = 0;
+var participante = null;
+contribuyentes.push({
+	dni:"12345678",
+	nombres:"Pedro",
+	apellidos: "Perez G",
+	email:"pedro.perez@mail.com",
+	win:false,
+	premio:"",
+	intentos:3
+});
+contribuyentes.push({
+	dni:"12345679",
+	nombres:"Maria",
+	apellidos: "Perez G",
+	email:"maria.perez@mail.com",
+	win:false,
+	premio:"",
+	intentos:3
+});
+contribuyentes.push({
+	dni:"123456",
+	nombres:"Pablo",
+	apellidos: "",
+	email:"",
+	win:false,
+	premio:"",
+	intentos:0
+});
+
+var intentos = 0;
+var premioGanador = "";
+
+if (Juego==null) {
+    $("#inicio").hide();
+    
+    $("#inactivo").show();
+
+} 
+
+
+var segments = [];
+JuegoImagenes.forEach(function (item, index) {
+    segments.push({
+        //'image': '/Content/Juego/img/' + item.JuegoID + '/' + item.ImagenSlice.trim(),
+        'fillStyle' : item.ColorSlice,
+        'text': item.TextoSlice
+    });
+
+});
+
+//'segments':                 // Define segments including image and text.
+//[
+
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot1.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot2.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot3.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot4.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot5.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot6.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot7.png', 'text': '/S Jane' },
+//    //{ 'image': 'Games/GetMyImage?ImageId=slot8.png', 'text': '/S Jane' }
+
+//    { 'image': '/Content/Juego/img/jane.png', 'text': '/S Jane' },
+//    { 'image': '/Content/Juego/img/rose.png', 'text': '/S Rose' },
+//    { 'image': '/Content/Juego/img/steve.png', 'text': '/S Steve' },
+//    { 'image': '/Content/Juego/img/tom.png', 'text': '/S Tom' },
+//    { 'image': '/Content/Juego/img/mary.png', 'text': '/S Mary' },
+//    { 'image': '/Content/Juego/img/alex.png', 'text': '/S Alex' },
+//    { 'image': '/Content/Juego/img/sarah.png', 'text': '/S Sarah' },
+//    { 'image': '/Content/Juego/img/bruce.png', 'text': '/S Bruce' }
+
+//],
+
+var miRuleta = new Winwheel({
+    'numSegments': JuegoImagenes.length,                // Specify number of segments.
+    'outerRadius': 200,              // Set outer radius so wheel fits inside the background.
+    //'drawText': true,             // Code drawn text can be used with segment images.
+    //'textFontSize': 16,               // Set text options as desired.
+    //'textOrientation': 'curved',
+    //'textAlignment': 'inner',
+    //'textMargin': 90,
+    //'textFontFamily': 'monospace',
+    //'textStrokeStyle': 'black',
+    //'textLineWidth': 3,
+    //'textFillStyle': 'white',
+    //'drawMode': 'segmentImage',    // Must be segmentImage to draw wheel using one image per segemnt.
+    'segments': segments,               // Define segments including image and text.
+    'animation': {
+                'type': 'spinToStop', // Giro y alto
+                'duration': 5, // Duración de giro
+                'callbackFinished': 'Mensaje()', // Función para mostrar mensaje
+                'callbackAfter': 'dibujarIndicador()' // Funciona de pintar indicador
+            }
+    // Then specify animation to use as normal etc.
+});
+
+
+
+//var miRuleta = new Winwheel({
+//           'numSegments': 6, // Número de segmentos
+//           'outerRadius'    : 170, // Radio externo
+//            'segments':[ // Datos de los segmentos
+//            { 'fillStyle': '#ff0000', 'text': '/S 25000' },
+            
+            
+//            { 'fillStyle': '#a8a8a8', 'text': '/S 100' },
+            
+//            { 'fillStyle': '#ff0000', 'text': '/S  5000' },
+            
+            
+//            { 'fillStyle': '#a8a8a8', 'text': '/S 50' },
+            
+//            { 'fillStyle': '#ff0000', 'text': '/S    1000' },
+            
+            
+//            { 'fillStyle': '#a8a8a8', 'text': '/S 10' }
+//            ],
+//            'animation': { 
+//                'type': 'spinToStop', // Giro y alto
+//                'duration': 5, // Duración de giro
+//                'callbackFinished': 'Mensaje()', // Función para mostrar mensaje
+//                'callbackAfter': 'dibujarIndicador()' // Funciona de pintar indicador
+//            }
+//        });
+
+//var images = ['<img src="img/seven.png">','<img src="img/banana.png">','<img src="img/cherries.png">','<img src="img/lemon.png">','<img src="img/orange.png">','<img src="img/plum.png">','<img src="img/watermelon.png">'];
+ 
+//var images2 = [
+//'<img src="../Content/Juego/img/slot1.png">',
+//'<img src="../Content/Juego/img/slot2.png">',
+//'<img src="../Content/Juego/img/slot3.png">',
+//'<img src="../Content/Juego/img/slot4.png">',
+//'<img src="../Content/Juego/img/slot5.png">',
+//'<img src="../Content/Juego/img/slot6.png">'];
+
+//var ezslot = new EZSlots("ezslots",{"reelCount":4,"winningSet":[0,0,0,0],"symbols":images,"height":126,"width":126});
+
+//var ezslot = new EZSlots("ezslots",{"reelCount":3,"winningSet":[3,3,3,3],"symbols":images2,"height":126,"width":126,"callback":winslot});
+
+var isHuman=false;
+
+$(document).ready(function(){
+
+
+    $("#verMapa").click(function () {
+        verMapa();
+    });
+
+    
+
+    
+
+
+    $("#btn-iniciar").click(function (e) {
+        var ok = true;
+        var validNumeroDocumento = document.getElementById("NumeroDocumento");
+        if (!validNumeroDocumento.checkValidity()) {
+            //document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            ok = false
+
+        }
+        var validCodigoContribuyente = document.getElementById("CodigoContribuyente");
+        if (!validCodigoContribuyente.checkValidity()) {
+            //document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            ok = false
+
+        }
+
+        if (ok) {
+            e.preventDefault()
+            iniciar();
+        }
+		
+	});
+
+	$("#btn-actualizar").click(function (e) {
+
+	    var ok = true;
+	    var validTelefono = document.getElementById("telefonoContacto");
+	    if (!validTelefono.checkValidity()) {
+	        //document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            ok=false
+
+	    }
+	    var validCondicion = document.getElementById("check-term");
+	    if (!validCondicion.checkValidity()) {
+	        //document.getElementById("demo").innerHTML = inpObj.validationMessage;
+	        ok = false
+
+	    }
+	    
+	    if (ok) {
+	        e.preventDefault()
+	        actualizar();
+	    }
+	});
+
+	$("#btn-admin").click(function() {
+		admin();
+	});
+
+	$("#btn-act-tipojuego").click(function() {
+		$("#admin").toggle();
+		$("#tipo-juego").toggle();
+	});
+
+	$("#btn-act-premios").click(function() {
+		$("#admin").toggle();
+		$("#premios").toggle();
+	});
+
+	$("#btn-act-vigencia").click(function() {
+		$("#admin").toggle();
+		$("#vigencia").toggle();
+	});
+
+	$("#btn-act-condiciones").click(function() {
+		$("#admin").toggle();
+		$("#condiciones").toggle();
+    });
+
+    $("#btn-salir1").click(function () {
+        window.location.reload(false); 
+    });
+
+    $("#btn-salir2").click(function () {
+        window.location.reload(false);
+    });
+});
+
+
+var correctCaptcha = function(response) {
+	isHuman=(response.length!=0);
+	//if (response.length)
+    //    alert(response);
+    };
+
+
+
+function verMapa() {
+    $('#mapaSitio').slideToggle('slow');
+    $("#seccionInterna").css("padding-bottom", "33em");
+};
+
+function iniciar() {
+	isHuman=true;
+	if (!isHuman) {
+		alert("Error Verificacion Captcha!");
+		return false;
+	}
+	//var dni=$("#dni").val();
+	/*contribuyente= contribuyentes.find(item => {
+		return item.dni == dni
+	});*/
+	//contribuyente=null;
+	//contribuyentes.forEach(function (item, index) { 
+	//	if (item.dni==dni) {
+	//		contribuyente=item;
+	//	}
+	// })
+    var tipoDoc = $("#TipoDocumento").val();
+    var numDoc = $("#NumeroDocumento").val();
+    var codigoContribuyente = $("#CodigoContribuyente").val();
+
+    
+
+    var dataAjax = {
+        __RequestVerificationToken: gettoken(),
+        TipoDocumento: tipoDoc,
+        NumeroDocumento: numDoc,
+        CodigoContribuyente: codigoContribuyente
+    }
+
+    //DocumentType = "DNI";
+    //DocumentNumber = 12345678;
+    //PrimerNombre = "Pedro";
+    //SegundoNombre = "Jose";
+    //ApellidoPaterno = "Perez";
+    //MotherApellidoPaterno = "Sanchez";
+    //Address1 = "Jiron Los Patriotas";
+    //Address2 = "";
+    //District = "Lima";
+    //City = "Lima";
+    //Province = "Lima";
+
+    $.ajax({
+        url: 'SAT/LoginSAT',
+        type: 'POST',
+        dataType: 'json',
+        data: dataAjax,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("STicket", XHKey);
+        },
+        success: function (e) {
+            console.log(e);
+            contribuyente = e.Contribuyente;
+            participanteID = e.ID;
+            participante = e.Participante;
+            juegoParticipante = e.JuegoParticipante;
+            participanteOportunidades = e.ParticipanteOportunidades;
+            intentos = e.Jugadas;
+            if (contribuyente != null) {
+                $("#inicio").hide();
+                $("#actualizar").show();
+                $("#title-contribuyente").html(contribuyente.TipoDocumento + " " + contribuyente.NumeroDocumento);
+                $("#nombres").val(contribuyente.PrimerNombre + " " + contribuyente.SegundoNombre);
+                $("#apellidos").val(contribuyente.ApellidoPaterno + " " + contribuyente.ApellidoMaterno);
+                $("#oportunidades").val(intentos);
+                $("#telefonoContacto").val(participante.TelefonoContacto);
+                $("#correoContacto").val(participante.CorreoContacto);
+                $("#email").val(contribuyente.Correo);
+                if (intentos == 0) {
+                    $("#inicio-jugar").hide();
+                    $("#inicio-no-jugar").show();
+                }
+            } else {
+                alert("No registrado! :(");
+            }
+
+        },
+        error: OnError
+    });
+
+	
+}
+
+function buscarOPortunidadActual() {
+
+    oportunidadActualId = -1;
+    secuenciaActual = -1;
+    participanteOportunidades.forEach(function (item, index) {
+       
+        if (!item.Jugado) {
+            if (oportunidadActualId == -1) {
+                oportunidadActualId = item.JuegoParticipanteOportunidadID;
+                secuenciaActual = item.Secuencia;
+                tipoPremio = item.TipoPremioID;
+            }
+           
+        }
+
+    });
+
+}
+
+
+function actualizar() {
+	if (contribuyente!=null) {
+        var dataAjax = {
+            __RequestVerificationToken: gettoken(),
+            ParticipanteID: participanteID,
+            TelefonoContacto: $("#telefonoContacto").val(),
+            CorreoContacto: $("#correoContacto").val()
+        }
+        $.ajax({
+            url: 'Jugar/ActualizarParticipante',
+            type: 'POST',
+            dataType: 'json',
+            data: dataAjax,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("STicket", XHKey);
+            },
+            success: function (e) {
+                console.log(e);
+                if (e) {
+                    //intentos = contribuyente.InformacionPagos.length;
+
+                    if (intentos > 0) {
+
+
+
+                        $("#actualizar").hide();
+                        $("#play").show();
+                        //if (contribuyente.dni=="12345678") {
+                        //	$("#play").show();	
+                        //} else {
+                        //	$("#slotmachine").show();	
+                        //}
+
+
+                        $("#title-jugar").html(contribuyente.PrimerNombre + ", tienes " + intentos + " intentos para Jugar!");
+
+                    } else {
+                        alert("No tienes oportunidades de jugar! :(");
+                    }
+                } else {
+                    alert("No registrado! :(");
+                }
+
+            },
+            error: OnError
+        });
+
+
+
+        
+	} else {
+		alert("Falta actualizar!");
+	}
+}
+
+function admin() {
+
+	if (!isHuman) {
+		alert("Error Verificacion Captcha!");
+		return false;
+	}
+	var usuario = $("#usuario").val();
+	var clave = $("#password").val();
+
+	if (usuario=="admin" && clave=="admin") {
+		$("#acceso").hide();
+		$("#admin").show();
+	} else {
+		alert("Usuario o Clave incorrecta");
+	}
+
+
+}
+
+function salir() {
+	window.location="index.html";
+}
+
+function tipoJuego() {
+	$("#admin").hide();
+	$("#tipo-juego").show();
+}
+
+function premios() {
+	$("#admin").hide();
+	$("#premios").show();
+}
+
+function vigencia() {
+	$("#admin").hide();
+	$("#vigencia").show();
+}
+
+function condiciones() {
+	$("#admin").hide();
+	$("#condiciones").show();
+}
+
+function jugar() {
+    $("#btn-jugar").prop("disabled", true);
+    $("#sigue-girando").hide();
+    if (intentos > 0 ) {
+        
+		$("#jugada").html("");
+		miRuleta.rotationAngle = 0;
+        buscarOPortunidadActual();
+		miRuleta.draw();
+		dibujarIndicador();
+		//miRuleta.startAnimation();
+        calculatePremio();
+
+	} else {
+		if (contribuyente.win) {
+			alert("Felicitaciones has ganado " + contribuyente.premio + " !!! ");
+		} else {
+			alert("Lo sentimos ya no tiene oportunidades de jugar! :(");
+		}
+	}
+
+}
+
+
+function jugar2() {
+	
+	if (contribuyente.intentos>0 && !contribuyente.win) {
+		ezslot.win()
+
+	} else {
+		if (contribuyente.win) {
+			alert("Felicitaciones has ganado " + contribuyente.premio + " !!! ");
+		} else {
+			alert("Lo sentimos ya no tiene oportunidades de jugar! :(");
+		}
+	}
+
+}
+
+function winslot(results) {
+	contribuyente.intentos -= 1;
+	if (contribuyente.intentos==0) {
+		$("#btn-jugar").prop("disabled",true);
+	}
+	if (results[0]==results[1] && results[0]==results[1]) {
+		contribuyente.premio="/s 5000";
+		contribuyente.win=true;
+		$("#btn-reclamar2").val("Reclamar "+contribuyente.premio+ " !");
+		$("#winner2").show();
+		$("#btn-jugar2").prop("disabled",true);
+	}
+
+}
+
+
+function seguir() {
+    $("#winner").hide();
+    $("#mas-intentos").hide();
+    $("#reclamar-premio").hide();
+    $("#play").show();
+    $("#btn-jugar").prop("disabled", false);
+    $("#title-jugar").html(contribuyente.PrimerNombre + ", tienes " + intentos + " intentos para Jugar!");
+}
+
+function reclamar() {
+    if (contribuyente.Ganador) {
+        $("#play").hide();
+        $("#ganador-premio2").html(contribuyente.PrimerNombre + " has sido ganador de " + premioGanador + " !, Gracias por participar.");
+        $("#reclamar-premio").show();
+        $("#mas-intentos").hide();
+        if (intentos > 0) {
+            $("#seguir-title2").html("Te quedan  " + intentos + " intentos mas.");
+            $("#mas-intentos").show();
+
+        }
+        
+	}
+}
+
+function reclamar2() {
+	if (contribuyente.win) {
+		$("#slotmachine").hide();
+		$("#reclamar-premio").show();
+		$("#ganador-premio").html(contribuyente.nombres +" has sido ganador de " + contribuyente.premio +" !, Gracias por participar.");
+	}
+}
+
+function continuar() {
+	location.reload();
+}
+
+function calculatePremio() {
+    // This formula always makes the wheel stop somewhere inside prize 3 at least
+    // 1 degree away from the start and end edges of the segment.
+
+    var anguloSegmento = 360 / 8;   // numero de segmentos
+
+    var anguloInicial = (secuenciaActual * 45) - 45;
+
+    var stopAt = (anguloInicial + Math.floor((Math.random() * (anguloSegmento - 2))));
+
+    // Important thing is to set the stopAngle of the animation before stating the spin.
+    miRuleta.animation.stopAngle = stopAt;
+   
+
+    // May as well start the spin from here.
+    miRuleta.startAnimation();
+}
+
+function dibujarIndicador() {
+	var ctx = miRuleta.ctx;
+	ctx.strokeStyle = 'navy';     
+	ctx.fillStyle = 'black';     
+	ctx.lineWidth = 2;
+	ctx.beginPath();             
+	ctx.moveTo(170, 0);          
+	ctx.lineTo(230, 0);          
+	ctx.lineTo(200, 40);
+	ctx.lineTo(171, 0);
+	ctx.stroke();                
+	ctx.fill();                  
+}
+
+function Mensaje() {
+    var Ganador = false;
+    participanteOportunidades.forEach(function (item, index) {
+
+        if (item.JuegoParticipanteOportunidadID == oportunidadActualId) {
+            item.Jugado = true;
+            if (item.Ganara) {
+                item.Ganador = true;
+                Ganador = true;
+            }
+        }
+
+
+    });
+    intentos -= 1;
+    $("#title-jugar").html(contribuyente.PrimerNombre + " ,tienes " + intentos + " intentos para Jugar!");
+    var SegmentoSeleccionado = miRuleta.getIndicatedSegment();
+    
+
+    // registrar jugada
+    var dataAjax = {
+        __RequestVerificationToken: gettoken(),
+        JuegoParticipanteOportunidadID: oportunidadActualId,
+        Ganador: Ganador,
+        TipoPremioID: tipoPremio
+    }
+
+   
+    $.ajax({
+        url: 'Jugar/RegistrarJugada',
+        type: 'POST',
+        dataType: 'json',
+        data: dataAjax,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("STicket", XHKey);
+        },
+        success: function (e) {
+            console.log(e);
+            if (e) {
+
+                
+
+
+                //alert("Elemento seleccionado:" + SegmentoSeleccionado.text + "!");
+                if (intentos == 0) {
+                    $("#btn-jugar").prop("disabled", true);
+                    $("#gracias1").show();
+                    if (contribuyente.Ganador) {
+                        $("#ganador-premio").html("Has sido ganador de " + premioGanador );
+                        $("#ganado").show();
+                    }
+                    
+                } else {
+                    if (true) {
+                        $("#seguir-title").html("Tienes " + intentos + " intento mas.");
+                        $("#mas-intentos").show();
+                        $("#btn-jugar").prop("disabled", false);
+                    }
+                }
+                $("#jugada").html(SegmentoSeleccionado.text);
+                //if (SegmentoSeleccionado.text.startsWith("/S")) {
+                if (Ganador) {
+                    //contribuyente.premio=SegmentoSeleccionado.text;
+                    contribuyente.Ganador = true;
+                    //$("#btn-reclamar").val("Reclamar " + contribuyente.premio + " !");
+                    premioGanador = SegmentoSeleccionado.text;
+                    $("#btn-reclamar").val("Reclamar " + premioGanador + " !");
+                    $("#winner").show();
+                    $("#btn-jugar").prop("disabled", true);
+                }
+                miRuleta.stopAnimation(false);
+            } else {
+                alert("Jugada No registrado! :(");
+            }
+
+        },
+        error: function (ex) { }
+    });
+
+
+
+	
+	
+}
+
+
+function OnError(xhr, errorType, exception) {
+    var responseText;
+    $("#dialog").html("");
+    try {
+        responseText = jQuery.parseJSON(xhr.responseText);
+        $("#dialog").append("<div><b>" + errorType + " " + exception + "</b></div>");
+        $("#dialog").append("<div><u>Exception</u>:<br /><br />" + responseText.ExceptionType + "</div>");
+        $("#dialog").append("<div><u>StackTrace</u>:<br /><br />" + responseText.StackTrace + "</div>");
+        $("#dialog").append("<div><u>Message</u>:<br /><br />" + responseText.Message + "</div>");
+    } catch (e) {
+        responseText = xhr.responseText;
+        //responseText = "Entonces!!!";
+        //$("#dialog").html(responseText);
+        $("#error-title").html("Error");
+        $("#error-body").html(responseText);
+        $("#modal-error").modal('show');
+
+    }
+    //$("#dialog").dialog({
+    //    title: "jQuery Exception Details",
+    //    width: 700,
+    //    //buttons: {
+    //    //    Close: function () {
+    //    //        $(this).dialog('close');
+    //    //    }
+    //    //}
+    //});
+}
+
+
+

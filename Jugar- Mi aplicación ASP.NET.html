@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:52074/Jugar -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Mi aplicación ASP.NET</title>
+    <link href="./Jugar- Mi aplicación ASP.NET_files/bootstrap.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/site.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/custom.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/sat-fonts.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/sat.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/buttons.bootstrap.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/fixedHeader.bootstrap.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/responsive.bootstrap.css" rel="stylesheet">
+    <link href="./Jugar- Mi aplicación ASP.NET_files/scroller.bootstrap.css" rel="stylesheet">
+    <script src="./Jugar- Mi aplicación ASP.NET_files/modernizr-2.6.2.js.descarga"></script>
+</head>
+
+<body id="page-top" style="">
+    <header>
+        <div id="header">
+            <h1 class="movilNO">
+                <a href="https://www.sat.gob.pe/websitev9">
+                    <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/logo_SAT.png">
+                </a>
+            </h1>
+            <h1 class="movilSI">
+                <a href="https://www.sat.gob.pe/websitev9">
+                    <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/logo_SATMovil.png">
+                </a>
+            </h1>
+        </div>
+    </header>
+    <div id="overlay" style="height: 100%; display: none;"></div>
+    <div class="contenedorMenu"></div>
+    <div class="container body-content">
+        <link href="./Jugar- Mi aplicación ASP.NET_files/bootstrap.css" rel="stylesheet">
+        <link href="./Jugar- Mi aplicación ASP.NET_files/simple-line-icons.css" rel="stylesheet">
+        <link href="./Jugar- Mi aplicación ASP.NET_files/ezslots.css" rel="stylesheet">
+        <link href="./Jugar- Mi aplicación ASP.NET_files/stylish-portfolio.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width">
+        <title>Jugar</title>
+        <!-- Navigation -->
+        <!-- Header -->
+        <!--<header class="masthead d-flex">
+        <div class="container text-center my-auto">
+          <h1 class="mb-1">Stylish Portfolio</h1>
+          <h3 class="mb-5">
+            <em>A Free Bootstrap Theme by Start Bootstrap</em>
+          </h3>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+        </div>
+        <div class="overlay"></div>
+    </header>-->
+        <!-- About -->
+        <style>
+            /*Open Sans
+        Regular
+        14px
+        #555555*/
+
+            body {
+                font-family: 'open_sansregular';
+                color: #555555;
+                font-size: 14px;
+                /*text-transform: uppercase;*/
+                text-align: center;
+                /*font-weight: normal;*/
+            }
+
+            /*h2 {
+            font-size: 2em !important;
+            font-weight: 700;
+        }*/
+
+            h2 {
+                font-family: 'antonioregular', Antonio;
+                color: black;
+                font-size: 1.9em;
+                line-height: 1.5em;
+                text-align: center;
+            }
+
+            .boton-sat {
+                font-family: 'open_sansregular';
+                background: #0080ba;
+                color: white;
+                border-top: 1px solid #02b0ff;
+                border-left: 1px solid #02b0ff;
+                border-bottom: 1px solid #055478;
+                border-right: 1px solid #055478;
+                padding: 7px 25px;
+                border-radius: 5px;
+                display: inline-block;
+                font-size: 1em;
+                font-weight: 100;
+                margin-bottom: 1em;
+                margin-right: .5em;
+                webkit-box-shadow: none;
+                box-shadow: none;
+                text-shadow: none;
+            }
+
+            .titulo-seccion {
+                font-family: 'antonioregular';
+                font-size: 20px;
+                color: #0289cc
+            }
+
+            .titulo {
+                font-family: 'antonioregular';
+                font-size: 18.5px;
+                color: black;
+            }
+
+            .subtitulo {
+                font-family: 'open_sansregular';
+                font-weight: bold;
+                text-transform: capitalize;
+                font-size: 16px;
+                color: #555555;
+            }
+
+            .normal {
+                font-family: 'open_sansregular';
+                font-size: 14px;
+                color: #555555;
+            }
+
+            label {
+                /*font-size: 1.25em;*/
+                padding-top: .7em;
+                font-weight: normal;
+            }
+
+            /*.modal {
+            position: absolute;
+            top: 10px;
+            right: 100px;
+            bottom: 0;
+            left: 0;
+            z-index: 10040;
+            overflow: auto;
+            overflow-y: auto;
+        }*/
+
+            .modal-dialog {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                bottom: 10px;
+                left: 10px;
+                z-index: 10040;
+                overflow: auto;
+                overflow-y: auto;
+            }
+        </style>
+        <section class="content-section bg-light" id="page-top">
+            <div class="container">
+                <div class="row" style="margin-top:-50px;">
+                    <div class="col-lg-2" style="background-color: #0289cc;"></div>
+                    <div class="col-lg-8 mx-auto">
+                        <p class="titulo">Ruleta Rusia 2018!</p>
+                        <p class="titulo-seccion">Prueba tu Suerte!</p>
+                        <p class="lead mb-5 subtitulo">Actualiza tus datos y gana!!!</p>
+                        <form class="form" data-toggle="validator">
+                            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                                <div class="form-group">
+                                    <label>Seleccionar tipo documento:</label>
+                                    <select class="form-control" id="TipoDocumento">
+                                        <option>DNI</option>
+                                        <option>RUC</option>
+                                        <option>Carnet de Extranjería</option>
+                                        <option>Carnet de Pasaporte</option>
+                                        <option>Carnet de Identitad</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nº de documento:</label>
+                                    <input type="text" class="form-control" id="NumeroDocumento" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Codigo de Contribuyente:</label>
+                                    <input type="text" class="form-control" id="CodigoContribuyente" required="">
+                                </div>
+                                <button id="btn-iniciar" class="btn boton-sat" type="submit">Ingresar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-2" style="background-color: #0289cc"></div>
+                </div>
+                <!-- inicio -->
+                <!--<div class="row" id="inicio">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="titulo-seccion">Prueba tu Suerte!</p>
+                        <p class="lead mb-5 subtitulo">Actualiza tus datos y gana!!!</p>
+                        <form class="form" data-toggle="validator">
+                            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                                <div class="form-group">
+                                    <label>Seleccionar tipo documento:</label>
+                                    <select class="form-control" id="TipoDocumento">
+                                        <option>DNI</option>
+                                        <option>RUC</option>
+                                        <option>Carnet de Extranjería</option>
+                                        <option>Carnet de Pasaporte</option>
+                                        <option>Carnet de Identitad</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nº de documento:</label>
+                                    <input type="text" class="form-control" id="NumeroDocumento" required="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Codigo de Contribuyente:</label>
+                                    <input type="text" class="form-control" id="CodigoContribuyente" required="">
+                                </div>
+                                <button id="btn-iniciar" class="btn boton-sat" type="submit">Ingresar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>-->
+                <!-- juego inactivo -->
+                <div class="row" id="inactivo" style="display:none">
+                    <div class="col-lg-10 mx-auto">
+                        <h2>Juego No Disponible!</h2>
+                        <p class="lead mb-5" id="title-inactivo"></p>
+                    </div>
+                </div>
+                <!-- actualizar  -->
+                <div class="row" id="actualizar" style="display:none">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="titulo-seccion">Datos Actuales</p>
+                        <p class="lead mb-5 subtitulo" id="title-contribuyente"></p>
+                        <form class="form" data-toggle="validator">
+                            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                                <div class="form-group">
+                                    <label for="nombres" class="col-3 col-form-label">Nombres</label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" placeholder="Nombres" id="nombres" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellidos" class="col-3 col-form-label">Apellidos</label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" placeholder="Apellidos" id="apellidos" disabled="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="oportunidades" class="col-3 col-form-label">Jugadas:</label>
+                                    <div class="col-9">
+                                        <input class="form-control" type="text" placeholder="Oportunidades" id="oportunidades" disabled="">
+                                    </div>
+                                </div>
+                                <div id="inicio-jugar">
+                                    <div class="form-group">
+                                        <label for="telefonoContacto" class="col-3 col-form-label">Telefono:</label>
+                                        <div class="col-9">
+                                            <input class="form-control" type="phone" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" placeholder="Telefono de Contacto"
+                                                id="telefonoContacto" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="correoContacto" class="col-3 col-form-label">Correo:</label>
+                                        <div class="col-9">
+                                            <input class="form-control" type="email" placeholder="Correo Contacto" id="correoContacto">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-2"></div>
+                                        <label for="apellidos" class="col-10 col-form-label">
+                                            <a href="http://localhost:52074/Jugar#">Actualizar Datos Aqui</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-group" id="check-terms-conditions">
+                                        <div class="col-12 lngCheckAll nopadding terms-conditions">
+                                            <input type="checkbox" id="check-term" required="">
+                                            <label for="check-term"></label>&nbsp;&nbsp; Estoy de acuerdo con los
+                                            <a href="http://localhost:52074/Jugar#" onclick="viewTerms()">condiciones del juego</a>
+                                        </div>
+                                    </div>
+                                    <button id="btn-actualizar" class="btn boton-sat" type="submit">Participar</button>
+                                </div>
+                                <div id="inicio-no-jugar" style="display:none">
+                                    <div class="form-group row">
+                                        <label class="col-12 col-form-label">Estimado no tiene opciones para Jugar, mantenga su pago al dia para tener oportunidades.</label>
+                                        <button id="btn-salir1" class="btn boton-sat">Salir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--play-->
+                <div class="row" id="play" style="display:none">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="titulo-seccion">Prueba tu Suerte!</p>
+                        <p class="lead mb-5 subtitulo" id="title-jugar"></p>
+                        <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                            <div class="" id="winner" style="display:none">
+                                <div class="col-xs-12">
+                                    <img id="winner" src="./Jugar- Mi aplicación ASP.NET_files/winner.gif">
+                                </div>
+                                <div class="col-xs-4">
+                                    <input id="btn-reclamar" type="button" class="btn boton-sat" onclick="reclamar();" value="Reclamar Premio!">
+                                </div>
+                                <div class="col-xs-4"></div>
+                                <div class="col-xs-4" id="mas-intentos" style="display:none">
+                                    <button id="btn-seguir" class="btn boton-sat" type="submit" onclick="seguir()">Seguir Jugando</button>
+                                </div>
+                            </div>
+                            <div id="ganado" style="display:none">
+                                <p class="titulo-seccion">Felicitaciones</p>
+                                <p class="lead mb-5 subtitulo" id="ganador-premio"></p>
+                            </div>
+                            <input id="btn-jugar" type="button" class="btn boton-sat" onclick="jugar();" value="Girar">
+                            <canvas id="canvas" width="400" height="400">
+                                Canvas not supported, use another browser.
+                            </canvas>
+                            <label class="lead mb-5" id="jugada"></label>
+                            <div id="mas-intentosx" style="display:none">
+                                <p class="subtitulo" id="seguir-title2"></p>
+                                <button id="btn-seguir" class="btn boton-sat" type="submit" onclick="seguir()">Seguir Jugando</button>
+                            </div>
+                            <div id="gracias1" style="display:none">
+                                <p class="subtitulo">Lo Sentimos ya no tiene mas oportunidades para Jugar, Gracias por participar!</p>
+                                <button id="btn-salir2" class="btn boton-sat" type="submit">Salir</button>
+                            </div>
+                            <div id="sigue-girando" style="display:none">
+                                <p class="subtitulo" id="seguir-title"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- reclamar -->
+                <div class="row" id="reclamar-premio" style="display:none">
+                    <div class="col-lg-10 mx-auto">
+                        <p class="titulo-seccion">Felicitaciones</p>
+                        <p class="lead mb-5 subtitulo" id="ganador-premio2"></p>
+                        <input id="btn-go" type="button" class="btn boton-sat" onclick="continuar();" value="Salir">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded js-scroll-trigger" href="http://localhost:52074/Jugar#page-top" style="display: none;">
+            <i class="fa fa-angle-up"></i>
+        </a>
+        <div class="modal fade" tabindex="-1" role="dialog" id="modal-error">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <label id="error-title"></label>
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="error-body"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                            <i class="fa fa-ban"></i> Cerrar </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <script>
+            var jsonJuego = "{&quot;JuegoID&quot;:1,&quot;TipoJuegoID&quot;:1,&quot;Nombre&quot;:&quot;Mundial Rusia 2018&quot;,&quot;Notas&quot;:&quot;..&quot;,&quot;FechaDesde&quot;:&quot;2018-05-01T00:00:00&quot;,&quot;FechaHasta&quot;:&quot;2018-06-30T00:00:00&quot;,&quot;NumeroSegmentos&quot;:0,&quot;TotalPremios&quot;:300,&quot;TotalPremiosDia&quot;:10,&quot;TotalPremiosParticipante&quot;:1,&quot;Activo&quot;:true,&quot;Usuario&quot;:&quot;sa&quot;,&quot;FechaCreacion&quot;:&quot;2018-05-15T16:34:46.34&quot;,&quot;UsuarioUltimaVez&quot;:null,&quot;FechaUltimaVez&quot;:null}".replace(/&quot;/g, '\"');
+            var Juego = JSON.parse(jsonJuego);
+            var JuegoImagenes = JSON.parse("[{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:1,&quot;TipoPremioID&quot;:1,&quot;Secuencia&quot;:1,&quot;Nombre&quot;:&quot;Polo Peru&quot;,&quot;Imagen&quot;:&quot;PoloPeru&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoPolo.png&quot;,&quot;TextoSlice&quot;:&quot;Polo&quot;,&quot;ColorSlice&quot;:&quot;#fddb04&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:2,&quot;TipoPremioID&quot;:4,&quot;Secuencia&quot;:2,&quot;Nombre&quot;:&quot;Siga Intentando&quot;,&quot;Imagen&quot;:&quot;SigaIntentando&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoSigaIntentando.png&quot;,&quot;TextoSlice&quot;:&quot;Siga&quot;,&quot;ColorSlice&quot;:&quot;#666666&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:3,&quot;TipoPremioID&quot;:2,&quot;Secuencia&quot;:3,&quot;Nombre&quot;:&quot;Balon Rusia&quot;,&quot;Imagen&quot;:&quot;BalonRusia&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoBalon.png&quot;,&quot;TextoSlice&quot;:&quot;Balon&quot;,&quot;ColorSlice&quot;:&quot;#fddb04&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:4,&quot;TipoPremioID&quot;:4,&quot;Secuencia&quot;:4,&quot;Nombre&quot;:&quot;Siga Intentando&quot;,&quot;Imagen&quot;:&quot;SigaIntentando&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoSigaIntentando.png&quot;,&quot;TextoSlice&quot;:&quot;Siga&quot;,&quot;ColorSlice&quot;:&quot;#666666&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:5,&quot;TipoPremioID&quot;:3,&quot;Secuencia&quot;:5,&quot;Nombre&quot;:&quot;Toma Todo&quot;,&quot;Imagen&quot;:&quot;TomaTodo&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoPeru.png&quot;,&quot;TextoSlice&quot;:&quot;Peru&quot;,&quot;ColorSlice&quot;:&quot;#fddb04&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:6,&quot;TipoPremioID&quot;:4,&quot;Secuencia&quot;:6,&quot;Nombre&quot;:&quot;Siga Intentando&quot;,&quot;Imagen&quot;:&quot;SigaIntentando&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoSigaIntentando.png&quot;,&quot;TextoSlice&quot;:&quot;Siga&quot;,&quot;ColorSlice&quot;:&quot;#666666&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:7,&quot;TipoPremioID&quot;:1,&quot;Secuencia&quot;:7,&quot;Nombre&quot;:&quot;Polo Peru&quot;,&quot;Imagen&quot;:&quot;PoloPeru&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoPolo.png&quot;,&quot;TextoSlice&quot;:&quot;Polo&quot;,&quot;ColorSlice&quot;:&quot;#fddb04&quot;},{&quot;JuegoID&quot;:1,&quot;JuegoPremiosID&quot;:8,&quot;TipoPremioID&quot;:4,&quot;Secuencia&quot;:8,&quot;Nombre&quot;:&quot;Siga Intentando&quot;,&quot;Imagen&quot;:&quot;SigaIntentando&quot;,&quot;ImagenSlice&quot;:&quot;SegmentoSigaIntentando.png&quot;,&quot;TextoSlice&quot;:&quot;Siga&quot;,&quot;ColorSlice&quot;:&quot;#666666&quot;}]".replace(/&quot;/g, '\"'));
+            var Key = "SecurityTicket:cilg3hcwqp3nau0naa3zzmbu";
+            //var XHKey = "";
+            var XHKey = "405b59d9-cee3-4b7c-a11a-f4a318895fc9";
+            function gettoken() {
+                var token = '<input name="__RequestVerificationToken" type="hidden" value="9Jq-9bkKN6r4CIVf93zjL7i4kRbzy4RZYFbe1WptlcTLZNva9cad7M12Hf40K67y30IrP0Gd8qZQchQxfL3PHaolP7-ZMwIVVhdlBD1l8vg1" />';
+                token = $(token).val();
+                return token;
+            }
+        </script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/jquery-1.10.2.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/bootstrap.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/respond.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/Winwheel.min.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/TweenMax.min.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/stylish-portfolio.min.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/ezslots.js.descarga"></script>
+        <script src="./Jugar- Mi aplicación ASP.NET_files/ruleta.js.descarga"></script>
+        <hr>
+        <footer>
+            <div id="footer">
+                <div class="row movilNO">
+                    <div class="col-xs-12" id="verMapa">
+                        <h2>
+                            Mapa del sitio
+                            <br>
+                            <em class="fa fa-chevron-down"></em>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row movilNO" style="display: none;" id="mapaSitio">
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Sobre el SAT</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/SobreelSAT/QuienesSomos/AcercadelSAT">¿Quienes somos?</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/SobreelSAT/NuestrosReconocimientos/BuenasPracticas">Nuestros reconocimientos</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/cvvirtual/Modulos/frmVacantesPublicacion.aspx?mysession=sPA1JGvDfYcR1RtxDv83sQ%3d%3d&amp;tipvac=lpStAb42eLI%3D&amp;t=jmd1KR0V3Ps%3D"
+                                    target="_blank">Trabaja con nosotros</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/SobreelSAT/Informes/ControlInternoSAT">Control Interno del SAT</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Inicio/DatosAbiertos" target="_blank">Portal de datos abiertos</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Transparencia" target="_blank">Transparencia
+                                    <em class="fa fa-search"></em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Tributos y multas</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/PredialyArbitrios/Informacion">Imp. Predial y Arbitrios</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/ImpuestoVehicular/Informacion">Impuesto Vehicular</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/ImpuestoAlcabala/Informacion">Impuesto de Alcabala</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/JuegosyEspectaculos/Informacion">Juegos y Espectáculos</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/Papeletas/InformacionCodigodeTransito">Infr. Tránsito y Transporte</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/TributosMultas/MultasAdministrativas/Informacion">Multas Administrativas</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Trámites</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Tramites/TramitesTUPA/Formatos">Trámites TUPA</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Tramites/Ordenanzas/RatificacionOrdenanzas">Ratificación de Ordenanzas</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev8/modulos/consultas/Buscador_Expedientesv2.aspx">Expedientes de Tránsito</a>
+                            </li>
+                            <li>
+                                <a href="http://www.sat.gob.pe/transparenciav2/Contenidos/SolicitudInfo.aspx" target="_blank">Solicitud de Acceso a la Información</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Servicios</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/CartaServicios">Carta de Servicios</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/Defensoria/LibroReclamaciones">Libro de reclamaciones</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/MovilSAT">Movil SAT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/Websitev8/modulos/contenidos/ConsultaPapeletasv2.aspx">Papeletas sin efecto</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/website/login_emailv2.aspx?pag=147" target="_blank">Pitazo informativo</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/Saldomatico">Saldomático</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/SARA">SARA</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/SmartSAT">Smart SAT</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Programas</h3>
+                        <ul>
+                            <li>
+                                <a href="http://www.sat.gob.pe/culturatributaria/home.html" target="_blank">Cultura Tributaria</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Programas/ContribuyentePuntual">Contribuyente puntual</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Servicios/InfoMovilSAT">InfoMovil SAT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/WebSiteV9/responsabilidadsocial/" target="_blank">Responsabilidad Social</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <h3>Encuestas</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/WebSiteV8/Modulos/Encuesta/EncuestaOficinaVirtualv2.aspx" target="_blank">Encuesta Servicios Virtuales</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-2 col-md-2">
+                        <h3>Contáctenos</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Contactenos/AloSAT">Aló SAT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Contactenos/CorreoSAT">Correo SAT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Contactenos/ChatSAT">Chat SAT</a>
+                            </li>
+                            <li>
+                                <a href="https://www.sat.gob.pe/websitev9/Contactenos/AgenciasSAT">Agencias SAT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row copy">
+                    <div class="col-xs-12">
+                        <p class="movilNO">Compatible con: &nbsp;
+                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_chrome.png">&nbsp;Google Chrome 10+ &nbsp; &nbsp;
+                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_firefox.png">&nbsp;Firefox 10+ &nbsp; &nbsp;
+                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_ie.png">&nbsp;Internet Explorer 9+ </p>
+                        <p>
+                            <strong>©2016 Servicio de Administración Tributaria de Lima</strong>
+                        </p>
+                        <p>Jr. Camaná 370 - Cercado de Lima</p>
+                        <p>
+                            <a href="https://www.sat.gob.pe/websitev9/Pol%C3%ADticaPrivacidadInformacion" target="_blank">Política de Privacidad de la Información</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/jquery-1.10.2.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/bootstrap.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/respond.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/jquery.dataTables.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.bootstrap.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/buttons.colVis.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/buttons.flash.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/buttons.html5.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/buttons.print.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.buttons.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/buttons.bootstrap.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.fixedHeader.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.keyTable.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.responsive.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/responsive.bootstrap.js.descarga"></script>
+    <script src="./Jugar- Mi aplicación ASP.NET_files/dataTables.scroller.js.descarga"></script>
+</body>
+
+</html>
