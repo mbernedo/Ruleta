@@ -69,6 +69,11 @@
                 /*text-transform: uppercase;*/
                 text-align: center;
                 /*font-weight: normal;*/
+                background-image: url('./imagenes/baner-3.jpg'), url('./imagenes/baner-1.jpg'), url('./imagenes/baner-2.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 25%;
+                background-position: center top, left center, right center;
             }
 
             /*h2 {
@@ -159,41 +164,14 @@
             }
         </style>
         <section class="content-section bg-light" id="page-top">
-            <div class="container">
+            <div class="container text-center">
                 <div class="row" style="margin-top:-50px;">
-                    <div class="col-lg-2" style="background-color: #0289cc;"></div>
-                    <div class="col-lg-8 mx-auto">
+                    <div class="col-lg-10 mx-auto">
                         <p class="titulo">Ruleta Rusia 2018!</p>
-                        <p class="titulo-seccion">Prueba tu Suerte!</p>
-                        <p class="lead mb-5 subtitulo">Actualiza tus datos y gana!!!</p>
-                        <form class="form" data-toggle="validator">
-                            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                                <div class="form-group">
-                                    <label>Seleccionar tipo documento:</label>
-                                    <select class="form-control" id="TipoDocumento">
-                                        <option>DNI</option>
-                                        <option>RUC</option>
-                                        <option>Carnet de Extranjería</option>
-                                        <option>Carnet de Pasaporte</option>
-                                        <option>Carnet de Identitad</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Nº de documento:</label>
-                                    <input type="text" class="form-control" id="NumeroDocumento" required="">
-                                </div>
-                                <div class="form-group">
-                                    <label>Codigo de Contribuyente:</label>
-                                    <input type="text" class="form-control" id="CodigoContribuyente" required="">
-                                </div>
-                                <button id="btn-iniciar" class="btn boton-sat" type="submit">Ingresar</button>
-                            </div>
-                        </form>
                     </div>
-                    <div class="col-lg-2" style="background-color: #0289cc"></div>
                 </div>
                 <!-- inicio -->
-                <!--<div class="row" id="inicio">
+                <div class="row" id="inicio">
                     <div class="col-lg-10 mx-auto">
                         <p class="titulo-seccion">Prueba tu Suerte!</p>
                         <p class="lead mb-5 subtitulo">Actualiza tus datos y gana!!!</p>
@@ -221,7 +199,7 @@
                             </div>
                         </form>
                     </div>
-                </div>-->
+                </div>
                 <!-- juego inactivo -->
                 <div class="row" id="inactivo" style="display:none">
                     <div class="col-lg-10 mx-auto">
