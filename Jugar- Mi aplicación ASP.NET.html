@@ -19,7 +19,7 @@
     <script src="./Jugar- Mi aplicación ASP.NET_files/modernizr-2.6.2.js.descarga"></script>
 </head>
 
-<body id="page-top" style="">
+<body id="page-top">
     <header>
         <div id="header">
             <h1 class="movilNO">
@@ -61,7 +61,7 @@
         Regular
         14px
         #555555*/
-
+            
             body {
                 font-family: 'open_sansregular';
                 color: #555555;
@@ -75,12 +75,11 @@
                 background-size: 25%;
                 background-position: center top, left center, right center;
             }
-
             /*h2 {
             font-size: 2em !important;
             font-weight: 700;
         }*/
-
+            
             h2 {
                 font-family: 'antonioregular', Antonio;
                 color: black;
@@ -88,7 +87,12 @@
                 line-height: 1.5em;
                 text-align: center;
             }
-
+            
+            footer #footer {
+                width: 100%;
+                max-width: 20000px;
+            }
+            
             .boton-sat {
                 font-family: 'open_sansregular';
                 background: #0080ba;
@@ -108,19 +112,19 @@
                 box-shadow: none;
                 text-shadow: none;
             }
-
+            
             .titulo-seccion {
                 font-family: 'antonioregular';
                 font-size: 20px;
                 color: #0289cc
             }
-
+            
             .titulo {
                 font-family: 'antonioregular';
                 font-size: 18.5px;
                 color: black;
             }
-
+            
             .subtitulo {
                 font-family: 'open_sansregular';
                 font-weight: bold;
@@ -128,19 +132,18 @@
                 font-size: 16px;
                 color: #555555;
             }
-
+            
             .normal {
                 font-family: 'open_sansregular';
                 font-size: 14px;
                 color: #555555;
             }
-
+            
             label {
                 /*font-size: 1.25em;*/
                 padding-top: .7em;
                 font-weight: normal;
             }
-
             /*.modal {
             position: absolute;
             top: 10px;
@@ -151,7 +154,7 @@
             overflow: auto;
             overflow-y: auto;
         }*/
-
+            
             .modal-dialog {
                 position: absolute;
                 top: 10px;
@@ -162,24 +165,23 @@
                 overflow: auto;
                 overflow-y: auto;
             }
-
+            
             footer {
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 width: 100%;
             }
-
-            header{
+            
+            header {
                 position: fixed;
-                top: 0px;
+                z-index: 1;
                 left: 0;
+                top: 0;
                 width: 100%;
             }
-
-
-
-            @media only screen and (min-width:300px) and (max-width:450px) {
+            
+            @media only screen and (min-width:300px) and (max-width:390px) {
                 body {
                     font-family: 'open_sansregular';
                     color: #555555;
@@ -187,15 +189,18 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: 70%;
                     background-position: center top, left center, right center;
                 }
+                #page-top {
+                    margin-top: 10%;
+                }
             }
-
-            @media only screen and (min-width:451px) and (max-width:549px) {
+            
+            @media only screen and (min-width:391px) and (max-width:460px) {
                 body {
                     font-family: 'open_sansregular';
                     color: #555555;
@@ -203,21 +208,81 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    background-size: 25%;
+                    background-size: 70%;
                     background-position: center top, left center, right center;
                 }
                 .col-sm-offset-4 {
-                    margin-left: 10%;
+                    margin-left: 4%;
                 }
                 label {
                     margin-right: 20%;
                 }
+                #page-top {
+                    margin-top: 10%;
+                }
+                #btn-iniciar{
+                    margin-right: 12%
+                }
             }
-
-            @media only screen and (min-width:550px) and (max-width:580px) {
+            
+            @media only screen and (min-width:461px) and (max-width:500px) {
+                body {
+                    font-family: 'open_sansregular';
+                    color: #555555;
+                    font-size: 14px;
+                    text-align: center;
+                    background-image: url('./imagenes/baner-4.jpg');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 70%;
+                    background-position: center top, left center, right center;
+                }
+                .col-sm-offset-4 {
+                    margin-left: 13%;
+                }
+                label {
+                    margin-right: 20%;
+                }
+                #page-top {
+                    margin-top: 10%;
+                }
+                #btn-iniciar{
+                    margin-right: 22%
+                }
+            }
+             @media only screen and (min-width:501px) and (max-width:560px) {
+                body {
+                    font-family: 'open_sansregular';
+                    color: #555555;
+                    font-size: 14px;
+                    text-align: center;
+                    background-image: url('./imagenes/baner-4.jpg');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 70%;
+                    background-position: center top, left center, right center;
+                }
+                .col-sm-offset-4 {
+                    margin-left: 18%;
+                }
+                label {
+                    margin-right: 20%;
+                }
+                #page-top {
+                    margin-top: 10%;
+                }
+                #btn-iniciar{
+                    margin-right: 22%
+                }
+                p{
+                    margin-left: 10%;
+                }
+            }
+            
+            @media only screen and (min-width:561px) and (max-width:580px) {
                 body {
                     font-family: 'open_sansregular';
                     color: #555555;
@@ -225,10 +290,10 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    background-size: 25%;
+                    background-size: 70%;
                     background-position: center top, left center, right center;
                 }
                 .col-sm-offset-4 {
@@ -256,8 +321,11 @@
                 label {
                     margin-right: 20%;
                 }
+                #page-top {
+                    margin-top: 10%;
+                }
             }
-
+            
             @media only screen and (min-width:581px) and (max-width:650px) {
                 body {
                     font-family: 'open_sansregular';
@@ -266,10 +334,10 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    background-size: 25%;
+                    background-size: 70%;
                     background-position: center top, left center, right center;
                 }
                 .col-sm-offset-4 {
@@ -283,7 +351,7 @@
                     margin-right: 20%;
                 }
             }
-
+            
             @media only screen and (min-width: 651px) and (max-width: 767px) {
                 body {
                     font-family: 'open_sansregular';
@@ -292,10 +360,10 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    background-size: 25%;
+                    background-size: 70%;
                     background-position: center top, left center, right center;
                 }
                 .form-control {
@@ -303,7 +371,7 @@
                     margin-right: auto;
                 }
             }
-
+            
             @media only screen and (min-width: 768px) and (max-width: 991px) {
                 body {
                     font-family: 'open_sansregular';
@@ -312,14 +380,14 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg');
+                    background-image: url('./imagenes/baner-4.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    background-size: 25%;
+                    background-size: 70%;
                     background-position: center top, left center, right center;
                 }
             }
-
+            
             @media only screen and (min-width: 992px) and (max-width: 1199px) {
                 body {
                     font-family: 'open_sansregular';
@@ -328,14 +396,14 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg'), url('./imagenes/baner-1.jpg'), url('./imagenes/baner-2.jpg');
+                    background-image: url('./imagenes/baner-4.jpg'), url('./imagenes/baner-1.jpg'), url('./imagenes/baner-2.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: 25%;
                     background-position: center top, left center, right center;
                 }
             }
-
+            
             @media only screen and (min-width: 1200px) {
                 body {
                     font-family: 'open_sansregular';
@@ -344,7 +412,7 @@
                     /*text-transform: uppercase;*/
                     text-align: center;
                     /*font-weight: normal;*/
-                    background-image: url('./imagenes/baner-3.jpg'), url('./imagenes/baner-1.jpg'), url('./imagenes/baner-2.jpg');
+                    background-image: url('./imagenes/baner-4.jpg'), url('./imagenes/baner-1.jpg'), url('./imagenes/baner-2.jpg');
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-size: 25%;
@@ -356,7 +424,6 @@
                 .col-sm-offset-4 {
                     margin-left: 42%;
                 }
-
             }
         </style>
         <section class="content-section bg-light" id="page-top">
@@ -367,7 +434,7 @@
                     </div>
                 </div>
                 <!-- inicio -->
-                <div class="row" id="inicio">
+                <div class="row" id="inicio" style="display: none">
                     <div class="col-lg-10 mx-auto">
                         <p class="titulo-seccion texto">Prueba tu Suerte!</p>
                         <p class="lead mb-5 subtitulo texto">Actualiza tus datos y gana!!!</p>
@@ -468,7 +535,7 @@
                     </div>
                 </div>
                 <!--play-->
-                <div class="row" id="play" style="display:none">
+                <div class="row" id="play">
                     <div class="col-lg-10 mx-auto">
                         <p class="titulo-seccion texto">Prueba tu Suerte!</p>
                         <p class="lead mb-5 subtitulo" id="title-jugar"></p>
@@ -574,7 +641,7 @@
             <div id="footer">
                 <div class="row movilNO">
                     <div class="col-xs-12" id="verMapa">
-                        <h2>
+                        <h2 style="margin: 0;">
                             Mapa del sitio
                             <br>
                             <em class="fa fa-chevron-down"></em>
@@ -720,11 +787,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row copy">
+                <div class="row copy" style="padding: 0;">
                     <div class="col-xs-12">
                         <p class="movilNO">Compatible con: &nbsp;
-                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_chrome.png">&nbsp;Google Chrome 10+ &nbsp; &nbsp;
-                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_firefox.png">&nbsp;Firefox 10+ &nbsp; &nbsp;
+                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_chrome.png">&nbsp;Google Chrome 10+
+                            &nbsp; &nbsp;
+                            <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_firefox.png">&nbsp;Firefox 10+ &nbsp;
+                            &nbsp;
                             <img alt="" src="./Jugar- Mi aplicación ASP.NET_files/icon_ie.png">&nbsp;Internet Explorer 9+
                         </p>
                         <p>
